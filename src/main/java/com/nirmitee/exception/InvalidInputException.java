@@ -1,13 +1,5 @@
-/**
- * 
- */
 package com.nirmitee.exception;
 
-/**
- * @author SV0205
- *
- */
-//@ResponseStatus(value = HttpStatus.NOT_FOUND)
 public class InvalidInputException extends RuntimeException {
 
 	/**
