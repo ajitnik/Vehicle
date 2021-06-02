@@ -1,0 +1,73 @@
+///////////////////////////////////////
+Create
+///////////////////////////////////////
+
+curl --location --request POST 'http://localhost:8090/vehicle/cars' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "condition": "USED",
+    "details": {
+        "body": "sedan",
+        "model": "Impala",
+        "manufacturer": {
+            "code": 101,
+            "name": "Chevrolet"
+        },
+        "numberOfDoors": 4,
+        "fuelType": "Gasoline",
+        "engine": "3.6L V6",
+        "mileage": 32280,
+        "modelYear": 2018,
+        "productionYear": 2018,
+        "externalColor": "White"
+    },
+    "location": {
+        "lat": 40.73061,
+        "lon": -73.935242
+    }
+}'
+
+///////////////////////////////////////
+
+///////////////////////////////////////
+Fetch
+///////////////////////////////////////
+
+curl --location --request GET 'http://localhost:8090/vehicle/cars/VEH100002'
+
+
+///////////////////////////////////////
+Delete
+///////////////////////////////////////
+
+curl --location --request DELETE 'http://localhost:8090/vehicle/cars/VEH100002'
+
+
+///////////////////////////////////////
+PUT
+///////////////////////////////////////
+
+curl --location --request PUT 'http://localhost:8090/vehicle/cars/VEH100001' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "condition": "NEW",
+    "details": {
+        "body": "sedan",
+        "model": "Impala",
+        "manufacturer": {
+            "code": 101,
+            "name": "Chevrolet"
+        },
+        "numberOfDoors": 4,
+        "fuelType": "Gasoline",
+        "engine": "3.6L V6",
+        "mileage": 32280,
+        "modelYear": 2018,
+        "productionYear": 2018,
+        "externalColor": "White"
+    },
+    "location": {
+        "lat": 40.73061,
+        "lon": -73.935242
+    }
+}'
